@@ -1,5 +1,5 @@
 ---
-id: Intervencion-en-crisis-y-salud-mental-laboral
+id: intervencion-en-crisis-salud-mental-laboral
 titulo: Intervención en Crisis y Salud Mental Laboral
 descripcion: 
 

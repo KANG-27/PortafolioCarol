@@ -1,5 +1,5 @@
 ---
-id: Seguridad-y-salud_en_el-trabajo-(SST)
+id: seguridad-salud-trabajo
 titulo: Servicios en Seguridad y Salud en el Trabajo (SST)
 descripcion: En el entorno laboral actual, la Seguridad y Salud en el Trabajo (SST) se ha convertido en un pilar estratégico para el éxito organizacional. Como profesional en psicología con especialización en SST, ofrezco un servicio integral orientado a fortalecer el bienestar físico, mental y social de los colaboradores, mediante la identificación, intervención y prevención de riesgos psicosociales y condiciones laborales adversas.
 subServicios:

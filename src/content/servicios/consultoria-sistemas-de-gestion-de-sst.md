@@ -1,5 +1,5 @@
 ---
-id: Consultoria-en-sistemas-de-gestion-de-SST-(SG-SST)
+id: consultoria-sistemas-de-gestion-de-sst
 titulo: Consultoría en Sistemas de Gestión de SST (SG-SST)
 descripcion: 
 

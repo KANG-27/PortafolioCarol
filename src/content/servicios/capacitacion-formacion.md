@@ -1,5 +1,5 @@
 ---
-id: Capacitacion-y-formacion
+id: capacitacion-formacion
 titulo: Capacitación y Formación
 descripcion: 
 

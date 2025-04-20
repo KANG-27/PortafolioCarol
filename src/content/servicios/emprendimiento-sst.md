@@ -1,5 +1,5 @@
 ---
-id: Emprendimiento-en-SST
+id: emprendimiento-sst
 titulo: Emprendimiento en SST
 descripcion: 
 

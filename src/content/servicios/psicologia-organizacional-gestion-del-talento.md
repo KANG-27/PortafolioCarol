@@ -1,5 +1,5 @@
 ---
-id: Psicologia-organizacional-y-gestion-del-talento
+id: psicologia-organizacional-gestion-del-talento
 titulo: Psicología Organizacional y Gestión del Talento
 descripcion: 
 
