@@ -1,0 +1,176 @@
+---
+---
+<div>
+    <section class="header-content">
+        <h1>CP</h1>
+        <div class="container">
+            <input
+                type="checkbox"
+                id="toggle-animation"
+                class="toggle-checkbox"
+            />
+            <label
+                id="toggle-content"
+                for="toggle-animation"
+                class="content"
+            >
+                <div class="line line-one"></div>
+                <div class="line line-two"></div>
+                <div class="line line-three"></div>
+            </label>
+        </div>
+    </section>
+</div>
+
+<script>
+	let checkbox = document.getElementById("toggle-animation");
+	if(checkbox){
+		checkbox.addEventListener("change", function () {
+			console.log(checkbox.checked);
+			if (checkbox.checked) {
+				// Realizar acciones si el checkbox está marcado
+				console.log("El checkbox está marcado.");
+				document.getElementById("toggle-content").classList.add("content-animation-revert");
+			} else {
+				// Realizar acciones si el checkbox no está marcado
+				setTimeout(
+					function () {
+						document.getElementById("toggle-content").classList.remove("content-animation-revert");
+					},
+					[1000],
+				);
+				console.log("El checkbox no está marcado.");
+			}
+		});
+
+	}
+</script>
+
+<style>
+	.header-content {
+		background-color: white;
+		display: flex;
+		justify-content: space-between;
+		color: black;
+		padding: 0% 2%;
+	}
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.toggle-checkbox {
+		display: none;
+	}
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		cursor: pointer;
+	}
+	.line {
+		background-color: #6a64f6;
+		border-radius: 5px;
+		width: 30px;
+		height: 3px;
+	}
+
+	.toggle-checkbox:checked ~ .content > .line-one {
+		animation: lineAnimationOne 0.7s forwards;
+	}
+	.toggle-checkbox:checked ~ .content > .line-two {
+		animation: lineAnimationTwo 0.7s forwards;
+	}
+	.toggle-checkbox:checked ~ .content > .line-three {
+		animation: lineAnimationThree 0.7s forwards;
+	}
+
+	/* revert */
+	.toggle-checkbox:not(:checked) ~ .content-animation-revert > .line-one {
+		animation: lineAnimationOneRevert 0.7s forwards;
+	}
+	.toggle-checkbox:not(:checked) ~ .content-animation-revert > .line-two {
+		animation: lineAnimationTwoRevert 0.7s forwards;
+	}
+	.toggle-checkbox:not(:checked) ~ .content-animation-revert > .line-three {
+		animation: lineAnimationThreeRevert 0.7s forwards;
+	}
+
+	@keyframes lineAnimationOne {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(8.5px);
+		}
+		100% {
+			transform: translateY(8.5px) rotate(45deg);
+		}
+	}
+
+	@keyframes lineAnimationTwo {
+		0% {
+			transform: scale(1);
+			opacity: 1;
+		}
+		50% {
+			transform: scale(0.5);
+			opacity: 0.5;
+		}
+		100% {
+			transform: scale(0);
+			opacity: 0;
+		}
+	}
+
+	@keyframes lineAnimationThree {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-8.5px);
+		}
+		100% {
+			transform: translateY(-8.5px) rotate(-45deg);
+		}
+	}
+
+	@keyframes lineAnimationOneRevert {
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(8.5px);
+		}
+		0% {
+			transform: translateY(8.5px) rotate(45deg);
+		}
+	}
+
+	@keyframes lineAnimationTwoRevert {
+		100% {
+			transform: scale(1);
+			opacity: 1;
+		}
+		50% {
+			transform: scale(0.5);
+			opacity: 0.5;
+		}
+		0% {
+			transform: scale(0);
+			opacity: 0;
+		}
+	}
+	@keyframes lineAnimationThreeRevert {
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-8.5px);
+		}
+		0% {
+			transform: translateY(-8.5px) rotate(-45deg);
+		}
+	}
+</style>
