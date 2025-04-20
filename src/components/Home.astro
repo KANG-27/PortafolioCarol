@@ -23,6 +23,68 @@
             </div>
         </div>
     </div>
+    <div>aqui va la linea</div>
+    <div class="content-services">
+        <h2>Mis Servicios</h2>
+        <div class="content-services-list">
+            <div class="card-services">
+                <h3>Seguridad y Salud en el Trabajo (SST)</h3>
+                <ul>
+                    <li>Evaluación e intervención de riesgos psicosociales</li>
+                    <li>Investigación de accidentes e incidentes laborales</li>
+                    <li>
+                        Diseño e implementación de programas de bienestar
+                        laboral
+                    </li>
+                </ul>
+                <button>Conoce más</button>
+            </div>
+            <div class="card-services">
+                <h3>Psicología Organizacional y Gestión del Talento</h3>
+                <ul>
+                    <li>Selección de personal con enfoque en seguridad</li>
+                    <li>Capacitación en factores humanos y seguridad</li>
+                    <li>Clima y cultura organizacional</li>
+                </ul>
+                <button>Conoce más</button>
+            </div>
+            <div class="card-services">
+                <h3>Consultoría en Sistemas de Gestión de SST (SG-SST)</h3>
+                <ul>
+                    <li>Elaboración de políticas y procedimientos</li>
+                    <li>Elaboración de políticas y procedimientos</li>
+                </ul>
+                <button>Conoce más</button>
+            </div>
+            <div class="card-services">
+                <h3>Manejo de crisis y primeros auxilios psicológicos</h3>
+                <ul>
+                    <li>Manejo de crisis y primeros auxilios psicológicos</li>
+                    <li>Atención individual o grupal</li>
+                    <li>
+                        Programas de prevención del acoso laboral (ley 1010 de
+                        2006)
+                    </li>
+                </ul>
+                <button>Conoce más</button>
+            </div>
+            <div class="card-services">
+                <h3>Capacitación y Formación</h3>
+                <ul>
+                    <li>Talleres de prevención</li>
+                    <li>Liderazgo en SST</li>
+                </ul>
+                <button>Conoce más</button>
+            </div>
+            <div class="card-services">
+                <h3>Emprendimiento en SST</h3>
+                <ul>
+                    <li>Consultoría independiente</li>
+                </ul>
+                <button>Conoce más</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -44,12 +106,40 @@
         width: 70%;
         text-align: center;
     }
-    .content-buttons{
+    .content-buttons {
         margin-top: 5%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 10px;
+    }
+    .content-services {
+        text-align: center;
+    }
+    .content-services-list {
+        margin: 0% 5%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .card-services {
+        background-color: white;
+        border-radius: 5%;
+        color: black;
+        padding: 4%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    ul {
+        padding: 10%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 12px;
+        margin: 0%;
     }
 </style>
