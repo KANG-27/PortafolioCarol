@@ -1,6 +1,55 @@
 ---
 
 ---
+
 <div>
-    <span>hola</span>
+    <div class="content-info">
+        <div class="img-content">
+            <img src="src/assets/fotoPerfil.png" alt="" class="imagen-perfil" />
+        </div>
+        <div class="content">
+            <h1>Carol Guerrrero</h1>
+            <span
+                >¡Hola! Soy Carol Paola Guerrero Acosta, psicóloga apasionada
+                por transformar los espacios laborales. Me especializo en
+                Seguridad y Salud en el Trabajo (SST), pero con un plus: no solo
+                me enfoco en cumplir normas, sino en entender a las personas
+                detrás de los puestos. ¿El objetivo? Que sus equipos trabajen
+                felices y sin riesgos.</span
+            >
+            <div class="content-buttons">
+                <button>Trayectoria / Formación</button>
+                <button>Contactame</button>
+            </div>
+        </div>
+    </div>
 </div>
+
+<style>
+    .content-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5%;
+    }
+    .imagen-perfil {
+        width: 70%;
+    }
+    .img-content {
+        display: flex;
+        justify-content: center;
+        width: 35%;
+    }
+    .content {
+        width: 70%;
+        text-align: center;
+    }
+    .content-buttons{
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+</style>
