@@ -2,10 +2,11 @@
 // src/pages/servicios/[id].astro
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
 
 export async function getStaticPaths() {
   const servicios = await getCollection("servicios");
-  
+
   return servicios.map((servicio) => ({
     params: { id: servicio.slug },
     props: { servicio },
@@ -14,8 +15,167 @@ export async function getStaticPaths() {
 
 const { servicio } = Astro.props;
 const { data, body } = servicio;
+
+console.log(data);
 ---
 
 <Layout>
-    <main>holaaaa</main>
+  <Header />
+  <main>
+    <div class="content-info">
+      <img src="../SaludEnElTrabajo.png" alt="" />
+      <div class="content-text">
+        <h1>{data.titulo}</h1>
+        <span class="descripcion-content-info">{data.descripcion}</span>
+      </div>
+    </div>
+    <div>Linea</div>
+    <div class="content-services-data">
+      <h2>Mas servicios</h2>
+      <div class="content-text-servicios">
+        <div class="content-buttons">
+          {
+            data.subServicios.map((subServicio) => (
+              <button class="button-select buttons" id={subServicio.titulo}>
+                {subServicio.titulo}
+              </button>
+            ))
+          }
+        </div>
+        <div class="card-services-info">
+          {
+            data.subServicios.map((subServicio, i) => (
+              <div
+                class={i == 0 ? "content-info-servicios" : "buttoon-oculto"}
+                id={subServicio.titulo + "Card"}
+              >
+                <h2 class="titulo-servicios">{subServicio.titulo}</h2>
+                <span class="descripcion-servicios">{subServicio.descripcion}</span>
+                <button class="contactame">Contactame</button>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
+
+<script>
+  const buttons = document.querySelectorAll(".button-select");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const id = button.id;
+      const cards = document.querySelectorAll(".content-info-servicios");
+      cards[0].classList.add("buttoon-oculto");
+      cards[0].classList.remove("content-info-servicios");
+      const cardContent = document.getElementById(id + "Card");
+      cardContent.classList.remove("buttoon-oculto");
+      cardContent.classList.add("content-info-servicios");
+    });
+  });
+</script>
+
+<style>
+  html,
+  body {
+    background-color: #002d5b;
+    color: white;
+  }
+  html,
+  main {
+    margin-bottom: 100px;
+  }
+  .content-info-servicios {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    text-align: center;
+    /* justify-content: space-around; */
+  }
+  .content-info {
+    display: flex;
+    margin: 5%;
+    gap: 5%;
+  }
+  .content-info img {
+    width: 35%;
+  }
+  .content-text span {
+    font-size: 15px;
+  }
+  .content-services-data {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    text-align: center;
+    gap: 5%;
+  }
+  .content-text-servicios {
+    display: flex;
+    height: 100vh;
+    gap: 5%;
+    align-items: center;
+  }
+  .content-buttons {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+    margin: 5% 0%;
+    width: 30%;
+  }
+  .card-services-info {
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    width: 70%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .card-services-info button{
+    all: unset;
+    background-color: #4D45FF;
+    color: white;
+    border-radius: 5px;
+    padding: 2%;
+    cursor: pointer;
+    margin-top: 6%;
+
+  }
+
+  .button-select {
+    margin-bottom: 5%;
+  }
+  .buttoon-oculto {
+    display: none;
+  }
+  .buttons{
+    all: unset;
+    background-color: #4D45FF;
+    color: white;
+    border-radius: 5px;
+    padding: 5%;
+    cursor: pointer;
+    font-size: 11px;
+  }
+  .descripcion-servicios{
+    font-family: "Nunito", sans-serif;
+    font-size: 12px;
+  }
+  .titulo-servicios{
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .descripcion-content-info{
+    /* font-family: "Nunito", sans-serif; */
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 300;  
+    }
+</style>

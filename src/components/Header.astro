@@ -1,52 +1,61 @@
 ---
+
 ---
+
 <div>
-    <section class="header-content">
-        <h1>CP</h1>
-        <div class="container">
-            <input
-                type="checkbox"
-                id="toggle-animation"
-                class="toggle-checkbox"
-            />
-            <label
-                id="toggle-content"
-                for="toggle-animation"
-                class="content"
-            >
-                <div class="line line-one"></div>
-                <div class="line line-two"></div>
-                <div class="line line-three"></div>
-            </label>
-        </div>
-    </section>
+	<section class="header-content">
+		<a href="/">
+			<h1 class="titulo">CG</h1>
+		</a>
+		<div class="container">
+			<input
+				type="checkbox"
+				id="toggle-animation"
+				class="toggle-checkbox"
+			/>
+			<label id="toggle-content" for="toggle-animation" class="content">
+				<div class="line line-one"></div>
+				<div class="line line-two"></div>
+				<div class="line line-three"></div>
+			</label>
+		</div>
+	</section>
 </div>
 
 <script>
 	let checkbox = document.getElementById("toggle-animation");
-	if(checkbox){
+	if (checkbox) {
 		checkbox.addEventListener("change", function () {
 			console.log(checkbox.checked);
 			if (checkbox.checked) {
 				// Realizar acciones si el checkbox está marcado
 				console.log("El checkbox está marcado.");
-				document.getElementById("toggle-content").classList.add("content-animation-revert");
+				document
+					.getElementById("toggle-content")
+					.classList.add("content-animation-revert");
 			} else {
 				// Realizar acciones si el checkbox no está marcado
 				setTimeout(
 					function () {
-						document.getElementById("toggle-content").classList.remove("content-animation-revert");
+						document
+							.getElementById("toggle-content")
+							.classList.remove("content-animation-revert");
 					},
 					[1000],
 				);
 				console.log("El checkbox no está marcado.");
 			}
 		});
-
 	}
 </script>
 
 <style>
+	.titulo {
+		font-family: "Oregano", cursive;
+		font-weight: 400;
+		font-size: 35px;
+		font-style: normal;
+	}
 	.header-content {
 		background-color: white;
 		display: flex;

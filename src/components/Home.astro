@@ -8,8 +8,8 @@
             <img src="src/assets/fotoPerfil.png" alt="" class="imagen-perfil" />
         </div>
         <div class="content">
-            <h1>Carol Guerrrero</h1>
-            <span
+            <h1>Carol Guerrero</h1>
+            <span class="sub-text"
                 >¡Hola! Soy Carol Paola Guerrero Acosta, psicóloga apasionada
                 por transformar los espacios laborales. Me especializo en
                 Seguridad y Salud en el Trabajo (SST), pero con un plus: no solo
@@ -37,7 +37,9 @@
                         laboral
                     </li>
                 </ul>
-                <button>Conoce más</button>
+                <a href="/servicios/seguridad-salud-trabajo">
+                    <button>Conoce más</button>
+                </a>
             </div>
             <div class="card-services">
                 <h3>Psicología Organizacional y Gestión del Talento</h3>
@@ -45,8 +47,16 @@
                     <li>Selección de personal con enfoque en seguridad</li>
                     <li>Capacitación en factores humanos y seguridad</li>
                     <li>Clima y cultura organizacional</li>
+                    <li>
+                        Actualización de áreas y Departamento HSEQ - SST,
+                        Recursos Humanos
+                    </li>
                 </ul>
-                <button>Conoce más</button>
+                <a
+                    href="/servicios/psicologia-organizacional-gestion-del-talento"
+                >
+                    <button>Conoce más</button>
+                </a>
             </div>
             <div class="card-services">
                 <h3>Consultoría en Sistemas de Gestión de SST (SG-SST)</h3>
@@ -54,7 +64,9 @@
                     <li>Elaboración de políticas y procedimientos</li>
                     <li>Elaboración de políticas y procedimientos</li>
                 </ul>
-                <button>Conoce más</button>
+                <a href="/servicios/consultoria-sistemas-de-gestion-de-sst">
+                    <button>Conoce más</button>
+                </a>
             </div>
             <div class="card-services">
                 <h3>Manejo de crisis y primeros auxilios psicológicos</h3>
@@ -66,7 +78,9 @@
                         2006)
                     </li>
                 </ul>
-                <button>Conoce más</button>
+                <a href="/servicios/capacitacion-formacion">
+                    <button>Conoce más</button>
+                </a>
             </div>
             <div class="card-services">
                 <h3>Capacitación y Formación</h3>
@@ -74,14 +88,9 @@
                     <li>Talleres de prevención</li>
                     <li>Liderazgo en SST</li>
                 </ul>
-                <button>Conoce más</button>
-            </div>
-            <div class="card-services">
-                <h3>Emprendimiento en SST</h3>
-                <ul>
-                    <li>Consultoría independiente</li>
-                </ul>
-                <button>Conoce más</button>
+                <a href="/servicios/capacitacion-formacion">
+                    <button>Conoce más</button>
+                </a>
             </div>
         </div>
     </div>
@@ -124,11 +133,25 @@
         gap: 20px;
     }
 
+    
+    button {
+        all: unset;
+        background-color: #4d45ff;
+        color: white;
+        border-radius: 5px;
+        padding: 2% 5%;
+        cursor: pointer;
+        font-size: 12px;
+        margin-bottom: 2%;
+
+    }
+    .card-services button{
+        width: 70%;
+    }
     .card-services {
         background-color: white;
         border-radius: 5%;
         color: black;
-        padding: 4%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -141,5 +164,18 @@
         gap: 10px;
         font-size: 12px;
         margin: 0%;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-size: 11px;
+    }
+    h3 {
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-size: 15px;
+    }
+    .sub-text {
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-size: 12px;
     }
 </style>
