@@ -1,7 +1,7 @@
 ---
 id: capacitacion-formacion
 titulo: Capacitación y Formación
-descripcion: 
+descripcion: Como psicóloga especializada en SST, ofrezco programas de capacitación diseñados para fortalecer las competencias individuales y grupales en temas clave como el manejo del estrés, la conciencia de los riesgos laborales, el liderazgo en seguridad y la comunicación asertiva. Estas formaciones están orientadas a crear una cultura organizacional más segura y saludable, fomentando el bienestar mental y físico de los colaboradores, y contribuyendo al cumplimiento efectivo del Sistema de Gestión en Seguridad y Salud en el Trabajo (SG-SST).
 
 subServicios:
     - titulo: Talleres de prevención
