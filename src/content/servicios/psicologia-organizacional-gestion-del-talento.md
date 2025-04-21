@@ -13,11 +13,11 @@ subServicios:
     - titulo: Actualización de áreas y Departamento HSEQ – SST, Recursos Humanos
       descripcion: "Brindo acompañamiento técnico y psicológico para la actualización de procesos en las áreas de HSEQ, Seguridad y Salud en el Trabajo, y Recursos Humanos, con un enfoque en el bienestar organizacional y la gestión efectiva del talento humano. 
         Este servicio incluye: 
-       •	Revisión y ajuste de perfiles de cargo en función de las competencias requeridas y los riesgos asociados a cada rol. 
-       •	Diseño y aplicación de evaluaciones de desempeño alineadas con los objetivos del SG-SST. 
-       •	Asesoría para la implementación de estrategias que integren los factores psicosociales en la gestión del recurso humano. 
-       •	Actualización documental según la normativa vigente y necesidades organizacionales. 
-       Contribuyo así a fortalecer la cultura de seguridad, mejorar la productividad y fomentar una gestión más humana y estratégica del talento."
+       \n•	Revisión y ajuste de perfiles de cargo en función de las competencias requeridas y los riesgos asociados a cada rol. 
+       \n•	Diseño y aplicación de evaluaciones de desempeño alineadas con los objetivos del SG-SST. 
+       \n•	Asesoría para la implementación de estrategias que integren los factores psicosociales en la gestión del recurso humano. 
+       \n•	Actualización documental según la normativa vigente y necesidades organizacionales. 
+       \nContribuyo así a fortalecer la cultura de seguridad, mejorar la productividad y fomentar una gestión más humana y estratégica del talento."
     
 
 
