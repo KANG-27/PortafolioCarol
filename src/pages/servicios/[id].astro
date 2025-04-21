@@ -29,7 +29,11 @@ console.log(data);
         <span class="descripcion-content-info">{data.descripcion}</span>
       </div>
     </div>
-    <div>Linea</div>
+    <div class="content-icons">
+      <span class="material-symbols-outlined"> neurology </span>
+      <div class="linea"></div>
+      <span class="material-symbols-outlined"> apartment </span>
+    </div>
     <div class="content-services-data">
       <h2>Mas servicios</h2>
       <div class="content-text-servicios">
@@ -50,7 +54,9 @@ console.log(data);
                 id={subServicio.titulo + "Card"}
               >
                 <h2 class="titulo-servicios">{subServicio.titulo}</h2>
-                <span class="descripcion-servicios">{subServicio.descripcion}</span>
+                <span class="descripcion-servicios">
+                  {subServicio.descripcion}
+                </span>
                 <button class="contactame">Contactame</button>
               </div>
             ))
@@ -86,8 +92,20 @@ console.log(data);
   main {
     margin-bottom: 100px;
   }
-  h1{
+  h1 {
     font-size: 25px;
+  }
+  .linea {
+    width: 70%;
+    height: 2px;
+    background-color: white;
+    margin: 0% 5%;
+    border-radius: 5px;
+  }
+  .content-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .content-info-servicios {
     display: flex;
@@ -98,7 +116,7 @@ console.log(data);
   }
   .content-info {
     display: flex;
-    margin: 5%;
+    margin: 10% 5%;
     gap: 5%;
   }
   .content-info img {
@@ -140,15 +158,14 @@ console.log(data);
     justify-content: space-between;
     text-align: left;
   }
-  .card-services-info button{
+  .card-services-info button {
     all: unset;
-    background-color: #4D45FF;
+    background-color: #4d45ff;
     color: white;
     border-radius: 5px;
     padding: 2%;
     cursor: pointer;
     margin-top: 6%;
-
   }
 
   .button-select {
@@ -157,29 +174,29 @@ console.log(data);
   .buttoon-oculto {
     display: none;
   }
-  .buttons{
+  .buttons {
     all: unset;
-    background-color: #4D45FF;
+    background-color: #4d45ff;
     color: white;
     border-radius: 5px;
     padding: 5%;
     cursor: pointer;
     font-size: 11px;
   }
-  .descripcion-servicios{
+  .descripcion-servicios {
     font-family: "Nunito", sans-serif;
     font-size: 12px;
   }
-  .titulo-servicios{
+  .titulo-servicios {
     font-family: "Poppins", sans-serif;
     font-size: 20px;
     font-weight: 600;
   }
-  .descripcion-content-info{
+  .descripcion-content-info {
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-weight: 300;  
+    font-weight: 300;
     font-size: 12px !important;
-    }
+  }
 </style>

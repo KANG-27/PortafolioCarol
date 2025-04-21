@@ -7,41 +7,175 @@
 		<a href="/">
 			<h1 class="titulo">CG</h1>
 		</a>
-		<div class="container">
-			<input
-				type="checkbox"
-				id="toggle-animation"
-				class="toggle-checkbox"
-			/>
-			<label id="toggle-content" for="toggle-animation" class="content">
-				<div class="line line-one"></div>
-				<div class="line line-two"></div>
-				<div class="line line-three"></div>
-			</label>
+		<div class="header-content-navbar" id="header-content-navbar">
+			<div class="container">
+				<input
+					type="checkbox"
+					id="toggle-animation"
+					class="toggle-checkbox"
+				/>
+				<label
+					id="toggle-content"
+					for="toggle-animation"
+					class="content"
+				>
+					<div class="line line-one"></div>
+					<div class="line line-two"></div>
+					<div class="line line-three"></div>
+				</label>
+			</div>
+			<div class="navbar-content" id="navbar-content">
+				<h2 class="cursor-text"><a href="">Inicio</a></h2>
+				<h2>Servicios</h2>
+				<ul>
+					<li>
+						<div>
+							<span class="titulo-servicio-nav cursor-text"
+								><a href="/servicios/seguridad-salud-trabajo">Seguridad y Salud en el Trabajo (SST)</a
+								></span
+							>
+							<!-- <ul class="navbar-list">
+								<li class="cursor-text">
+									<a href="">
+										Evaluación e intervención de riesgos
+										psicosociales
+									</a>
+								</li>
+								<li class="cursor-text">
+									<a href="">
+										Investigación de accidentes e incidentes
+										laborales
+									</a>
+								</li>
+								<li class="cursor-text">
+									<a href="">
+										Investigación de accidentes e incidentes
+										laborales
+									</a>
+								</li>
+							</ul> -->
+						</div>
+					</li>
+					<li>
+						<div>
+							<span class="titulo-servicio-nav cursor-text">
+								<a href="/servicios/psicologia-organizacional-gestion-del-talento"> Psicología Organizacional y Gestión del Talento </a>
+							</span>
+							<!-- <ul class="navbar-list">
+								<li class="cursor-text">
+									<a href="">
+										Selección de personal con enfoque en seguridad
+									</a>
+								</li>
+								<li class="cursor-text">
+									<a href="">
+										Capacitación en factores humanos y seguridad
+									</a>
+								</li>
+								<li class="cursor-text">
+									<a href=""> Clima y cultura organizacional </a>
+								</li>
+								<li class="cursor-text">
+									<a href="">
+										Actualización de áreas y Departamento HSEQ -
+										SST, Recursos Humanos
+									</a>
+								</li>
+							</ul> -->
+						</div>
+					</li>
+					<li>
+						<div>
+							<span class="titulo-servicio-nav cursor-text">
+								<a href="/servicios/consultoria-sistemas-de-gestion-de-sst">
+									Consultoría en Sistemas de Gestión de SST (SG-SST)
+								</a></span
+							>
+							<!-- <ul class="navbar-list">
+								<li class="cursor-text">
+									<a href="">
+										Elaboración de políticas y procedimientos
+									</a>
+								</li>
+								<li class="cursor-text">
+									<a href="">
+										Elaboración de políticas y procedimientos
+									</a>
+								</li>
+							</ul> -->
+						</div>
+					</li>
+					<li>
+						<div>
+							<span class="titulo-servicio-nav cursor-text">
+								<a href="/servicios/capacitacion-formacion">Manejo de crisis y primeros auxilios psicológicos</a
+								></span
+							>
+							<!-- <ul class="navbar-list">
+								<li class="cursor-text">
+									<a href="">
+										Manejo de crisis y primeros auxilios
+										psicológicos
+									</a>
+								</li>
+								<li class="cursor-text">
+									<a href=""> Atención individual o grupal </a>
+								</li>
+								<li class="cursor-text">
+									<a href="">
+										Programas de prevención del acoso laboral (ley
+										1010 de 2006)
+									</a>
+								</li>
+							</ul> -->
+						</div>
+					</li>
+					<li>
+						<div>
+							<span class="titulo-servicio-nav cursor-text"
+								><a href="/servicios/capacitacion-formacion">Capacitación y Formación</a></span
+							>
+							<!-- <ul class="navbar-list">
+								<li class="cursor-text">
+									<a href="">Talleres de prevención</a>
+								</li>
+								<li class="cursor-text">
+									<a href="">Liderazgo en SST</a>
+								</li>
+							</ul> -->
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</section>
 </div>
 
 <script>
 	let checkbox = document.getElementById("toggle-animation");
+	let select = document.getElementById("toggle-content");
+	let navbar = document.getElementById("navbar-content");
+
 	if (checkbox) {
 		checkbox.addEventListener("change", function () {
 			console.log(checkbox.checked);
 			if (checkbox.checked) {
 				// Realizar acciones si el checkbox está marcado
 				console.log("El checkbox está marcado.");
-				document
-					.getElementById("toggle-content")
-					.classList.add("content-animation-revert");
+				select.classList.add("content-animation-revert");
+				navbar.classList.remove("navbar-content-animation-close");
+				navbar.classList.add("navbar-content-animation-open");
 			} else {
 				// Realizar acciones si el checkbox no está marcado
 				setTimeout(
 					function () {
-						document
-							.getElementById("toggle-content")
-							.classList.remove("content-animation-revert");
+						select.classList.remove("content-animation-revert");
+						navbar.classList.remove(
+							"navbar-content-animation-open",
+						);
+						navbar.classList.add("navbar-content-animation-close");
 					},
-					[1000],
+					[400],
 				);
 				console.log("El checkbox no está marcado.");
 			}
@@ -50,6 +184,45 @@
 </script>
 
 <style>
+	a{
+		all: unset;
+		cursor: pointer; 
+	}
+	.cursor-text {
+		cursor: pointer;
+	}
+	.titulo-servicio-nav {
+		font-family: "Poppins", sans-serif;
+		font-size: 15px;
+	}
+	.navbar-list {
+		font-family: "Nunito", sans-serif;
+		font-size: 12px;
+	}
+	h2 {
+		font-family: "Poppins", sans-serif;
+		margin-top: 0px;
+		font-size: 20px;
+	}
+	.header-content-navbar {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.navbar-content {
+		padding: 5% 2%;
+		background-color: white;
+		position: absolute;
+		top: 15%;
+		right: 0%;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		opacity: 0;
+		border-radius: 5px;
+		border-radius: 10px;
+		box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+	}
 	.titulo {
 		font-family: "Oregano", cursive;
 		font-weight: 400;
@@ -86,24 +259,24 @@
 	}
 
 	.toggle-checkbox:checked ~ .content > .line-one {
-		animation: lineAnimationOne 0.7s forwards;
+		animation: lineAnimationOne 0.5s forwards;
 	}
 	.toggle-checkbox:checked ~ .content > .line-two {
-		animation: lineAnimationTwo 0.7s forwards;
+		animation: lineAnimationTwo 0.5s forwards;
 	}
 	.toggle-checkbox:checked ~ .content > .line-three {
-		animation: lineAnimationThree 0.7s forwards;
+		animation: lineAnimationThree 0.5s forwards;
 	}
 
 	/* revert */
 	.toggle-checkbox:not(:checked) ~ .content-animation-revert > .line-one {
-		animation: lineAnimationOneRevert 0.7s forwards;
+		animation: lineAnimationOneRevert 0.5s forwards;
 	}
 	.toggle-checkbox:not(:checked) ~ .content-animation-revert > .line-two {
-		animation: lineAnimationTwoRevert 0.7s forwards;
+		animation: lineAnimationTwoRevert 0.5s forwards;
 	}
 	.toggle-checkbox:not(:checked) ~ .content-animation-revert > .line-three {
-		animation: lineAnimationThreeRevert 0.7s forwards;
+		animation: lineAnimationThreeRevert 0.5s forwards;
 	}
 
 	@keyframes lineAnimationOne {
@@ -180,6 +353,34 @@
 		}
 		0% {
 			transform: translateY(-8.5px) rotate(-45deg);
+		}
+	}
+
+	.navbar-content-animation-open {
+		animation: modal-servis-animation-open 0.5s forwards;
+	}
+
+	.navbar-content-animation-close {
+		animation: modal-servis-animation-close 0.5s forwards;
+	}
+	@keyframes modal-servis-animation-close {
+		0% {
+			height: max-content;
+			opacity: 1;
+		}
+		100% {
+			height: 0%;
+			opacity: 0;
+		}
+	}
+	@keyframes modal-servis-animation-open {
+		0% {
+			height: 0%;
+			opacity: 0;
+		}
+		100% {
+			height: max-content;
+			opacity: 1;
 		}
 	}
 </style>
